@@ -4,6 +4,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
 /**
  * @Controller; The @Controller annotation indicates that "CoursesController" is a controller
  *
@@ -35,9 +38,12 @@ public class CoursesController {
      */
 
     @RequestMapping("/course")
-    public String courses()
+    public String courses(HttpServletRequest req)
     {
-        System.out.println("Welcome to Backend Development");
+        HttpSession session = req.getSession();
+        String coursename = req.getParameter("coursename");
+        System.out.println("The course name is: " + coursename);
+        session.setAttribute("coursename", coursename);
         return "course.jsp";
     }
 }

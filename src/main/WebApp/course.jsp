@@ -31,9 +31,9 @@ li a:hover {
 <title>Backend Development</title>
 </head>
 <body>
-<h2>Backend Development Stack</h2>
+<h2>Backend Developments Stack</h2>
 <p>Click on the link below to learn about specific stack</p>
-
+<p> Welcome to Backend Developments ${coursename} </p>
 <ul>
   <li><a href="#">Java</a></li>
   <li><a href="#">Spring Boot</a></li>
